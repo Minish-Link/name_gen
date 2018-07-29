@@ -1,0 +1,52 @@
+import random
+
+def create_name(name):
+    
+    #name argument should be a list containing strings of capitalized letters A,D,J,N, or P, or
+    #nested lists containing said strings
+    
+    full_name = ""
+    name_seed = []
+    
+    plural = False
+    
+    for segment in name:
+        for word in segment:
+            for letter in word:
+                
+                if letter == 'A':
+                    index = random.randint(0,len(article_dict)-1)
+                    if article_dict[index] == "Two" or article_dict[index] == "Some":
+                        plural = True
+                    full_name += article_dict[index]
+                    name_seed.append(("a",index))
+                    
+                elif letter == 'D':
+                    index = random.randint(0,len(adverb_dict)-1)
+                    full_name += adverb_dict[index]
+                    name_seed.append(("d",index))
+                    
+                elif letter == 'J':
+                    index = random.randint(0,len(adjective_dict)-1)
+                    full_name += adjective_dict[index]
+                    name_seed.append(("j",index))
+                    
+                elif letter == 'N':
+                    index = random.randint(0,len(noun_dict)-1)
+                    full_name += noun_dict[index]
+                    if plural == True:
+                        full_name += "s"
+                        plural = False
+                    name_seed.append(("n",index))
+                    
+                elif letter == 'P':
+                    index = random.randint(0,len(preposition_dict)-1)
+                    full_name += preposition_dict[index]
+                    name_seed.append(("p",index))
+                    
+                else:
+                    full_name += "NULL"
+                
+                full_name += " "
+                
+    return full_name,name_seed
