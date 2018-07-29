@@ -3,3 +3,4 @@ adjective_dict = {0:"Lesser",1:"Greater",2:"Shiny",3:"Legendary"}
 article_dict = {0,"A",1:"The",2:"Some",3:"Two"}
 adverb_dict = {0:"Very",1:"Extremely",2:"Not",3:"Barely"
 prepositon_dict = {0:"Of",1:"With",2:"Wielding",3:"And"}
+name_gen_dict = {"A":article_dict,"D":adverb_dict,"J":adjective_dict,"N":noun_dict,"P":preposition_dict}
