@@ -1,6 +1,9 @@
-noun_dict = {0:"Rat",1:"Demon",2:"Dragon",3:"Ogre",4:"Rogue",5:"Wizard",6:"Barbarian",7:"Meatball"}
-adjective_dict = {0:"Lesser",1:"Greater",2:"Shiny",3:"Legendary"}
-article_dict = {0,"A",1:"The",2:"Some",3:"Two"}
-adverb_dict = {0:"Very",1:"Extremely",2:"Not",3:"Barely"
-prepositon_dict = {0:"Of",1:"With",2:"Wielding",3:"And"}
-name_gen_dict = {"A":article_dict,"D":adverb_dict,"J":adjective_dict,"N":noun_dict,"P":preposition_dict}
+noun_dict = ["Rat","Demon","Dragon","Ogre","Rogue","Wizard","Barbarian","Meatball","Spaghetti","Button","Card",
+            "Explosion","Sword","Gun","Medicine","Box","Orc","Alien","Cleric","Shaman","Consequence"]
+adjective_dict = ["Lesser","Greater","Shiny","Legendary","Spicy","Slammin'","Ugly","Sexy","Horrifying","Green","Red"]
+adverb_dict = ["Very","Extremely","Not","Barely","Strangely","Quite","Rather","Kinda"]
+article_dict = ["A","The","Some","Two","Each","Three","Most","My"]
+preposition_dict = ["Of","With","Wielding","And","Under","Above","Mounting","Eating"]
+dict_dict = {"A":article_dict,"D":adverb_dict,"J":adjective_dict,"N":noun_dict,"P":preposition_dict}
+plural_articles = ["Some","Two","Three","Most"]
+vowels = ["A","E","I","O","U"]
