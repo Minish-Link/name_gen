@@ -1,0 +1,27 @@
+import random
+
+def name_structure(girth):
+    
+    if girth < 1 or girth%1 != 0:
+        return "Not a valid length"
+    elif girth == 1:
+        return ["N"]
+    else:
+        name_comp = [["A","","N",""]]
+        girth -= 2
+        
+    while girth:
+        segment_mod = random.randint(0,len(name_comp))
+        if segment_mod:
+            if name_comp[(segment_mod)-1][1] == "":
+                name_comp[(segment_mod)-1][1] = "J"
+                girth -= 1
+            else:
+                name_comp[(segment_mod)-1][1] = "D"+name_comp[(segment_mod)-1][1]
+                girth -= 1
+        elif girth >= 3:
+            name_comp[-1][-1] = "P"
+            name_comp.append(["A","","N",""])
+            girth -= 3
+        
+    return name_comp
